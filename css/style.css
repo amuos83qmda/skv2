@@ -345,9 +345,9 @@ p { margin: 0 0 1.1em; }
     z-index: 70;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 1rem var(--gutter) 2rem;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 0 var(--gutter) 1.5rem;
     overflow-y: auto;
     background: var(--bg);
     border-top: 1px solid var(--line);
@@ -518,6 +518,14 @@ p { margin: 0 0 1.1em; }
   gap: 0.9rem;
 }
 
+/* Mobile: drop the extra viewport-height padding above the hero content
+   so it sits directly under the navbar instead of leaving a floating gap. */
+@media (max-width: 900px) {
+  .hero {
+    padding-top: var(--header-h);
+  }
+}
+
 
 /* 6. ABOUT
    ========================================================================== */
@@ -573,6 +581,27 @@ p { margin: 0 0 1.1em; }
   line-height: 1.15;
   outline: 1px solid rgba(255, 255, 255, 0.4);
   outline-offset: -0.75rem;
+}
+
+/* Mobile: stack the two columns, let the box size to its content, and make
+   sure long words wrap inside the red box instead of spilling out of it. */
+@media (max-width: 760px) {
+  .about__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+  .about__side { gap: 2rem; }
+  .about__lede,
+  .about__body { max-width: none; }
+  .pullquote {
+    max-width: 100%;
+    margin-left: 0;
+    padding: clamp(1.25rem, 6vw, 1.75rem);
+    font-size: clamp(1.3rem, 6.5vw, 1.75rem);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    outline-offset: -0.5rem;
+  }
 }
 
 
@@ -708,11 +737,13 @@ p { margin: 0 0 1.1em; }
   .member,
   .member:nth-child(4),
   .member:nth-child(5) { grid-column: auto; }
-  .member:nth-child(1) { --drop: 1.5rem; }
-  .member:nth-child(2) { --drop: 0rem; }
-  .member:nth-child(3) { --drop: 1.5rem; --bleed: 0%; }
-  .member:nth-child(4) { --drop: 0rem; }
-  .member:nth-child(5) { --drop: 0rem; grid-column: 1 / -1; width: 52%; justify-self: center; }
+  .member:nth-child(1),
+  .member:nth-child(2),
+  .member:nth-child(3),
+  .member:nth-child(4),
+  .member:nth-child(5) { --drop: 0rem; }
+  .member:nth-child(3) { --bleed: 0%; }
+  .member:nth-child(5) { grid-column: 1 / -1; width: 52%; justify-self: center; }
   .member__name { font-size: clamp(2rem, 11vw, 2.75rem); }
 }
 
