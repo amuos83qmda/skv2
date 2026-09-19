@@ -339,15 +339,29 @@ p { margin: 0 0 1.1em; }
 @media (max-width: 900px) {
   .js .menu-toggle { display: inline-flex; }
 
+  /* iOS Safari's status bar / notch and its collapsing URL bar aren't
+     accounted for by plain vh math, which is what leaves a gap the size
+     of that browser chrome. safe-area-inset-* covers the notch, and
+     100dvh (rather than a static inset) keeps the panel's height in
+     sync as Safari's bar shows/hides instead of sizing against a
+     viewport that no longer matches what's on screen. */
+  .site-header__inner {
+    height: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
   .js .nav {
     position: fixed;
-    inset: var(--header-h) 0 0 0;
+    top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+    left: 0;
+    right: 0;
+    height: calc(100dvh - var(--header-h) - env(safe-area-inset-top, 0px));
     z-index: 70;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.5rem;
-    padding: 0 var(--gutter) 1.5rem;
+    padding: 0 var(--gutter) calc(1.5rem + env(safe-area-inset-bottom, 0px));
     overflow-y: auto;
     background: var(--bg);
     border-top: 1px solid var(--line);
@@ -519,10 +533,16 @@ p { margin: 0 0 1.1em; }
 }
 
 /* Mobile: drop the extra viewport-height padding above the hero content
-   so it sits directly under the navbar instead of leaving a floating gap. */
+   so it sits directly under the navbar instead of leaving a floating gap.
+   The header grows on mobile to make room for the iOS status bar/notch
+   (see the header rule above), so the hero's own offsets have to grow
+   by the same safe-area amount or a sliver of the page background shows
+   through the transparent header where the status bar sits. */
 @media (max-width: 900px) {
   .hero {
-    padding-top: var(--header-h);
+    margin-top: calc(-1 * (var(--header-h) + env(safe-area-inset-top, 0px)));
+    padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+    min-height: calc(100svh - var(--header-h) - env(safe-area-inset-top, 0px));
   }
 }
 
