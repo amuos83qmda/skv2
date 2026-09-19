@@ -52,6 +52,11 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
+  /* iOS 26 Safari can fall back to this color behind its status bar at the
+     top of the page instead of showing real page pixels there; setting it
+     explicitly (matching body) keeps that fallback from showing as a
+     different-colored gap. */
+  background: var(--bg);
   scroll-padding-top: calc(var(--header-h) + 1rem);
   -webkit-text-size-adjust: 100%;
 }
@@ -238,14 +243,31 @@ p { margin: 0 0 1.1em; }
   position: sticky;
   top: 0;
   z-index: 80;
-  background: transparent;
   border-bottom: 1px solid transparent;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+
+/* iOS 26 Safari reads a fixed/sticky element's OWN background-color to tint
+   the status bar, and can clip a fully-opaque background on this kind of
+   element outright. A pseudo-element is invisible to that check, so the
+   header itself stays "transparent" as far as Safari's chrome is concerned,
+   while still fading in the same solid look once scrolled. Visually
+   identical to before on every browser. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .site-header.is-scrolled {
-  background: var(--bg);
   border-bottom-color: var(--line);
+}
+.site-header.is-scrolled::before {
+  opacity: 1;
 }
 
 .site-header__inner {
@@ -363,7 +385,12 @@ p { margin: 0 0 1.1em; }
     gap: 1.5rem;
     padding: 0 var(--gutter) calc(1.5rem + env(safe-area-inset-bottom, 0px));
     overflow-y: auto;
-    background: var(--bg);
+    /* iOS 26 Safari clips a position:fixed element outright if its own
+       background is fully opaque, leaving it uncovered right where the
+       status bar / floating toolbar sit — this is the "gap" here. A
+       background alpha of 0.99 (visually indistinguishable from solid)
+       routes it through Safari's normal compositor instead and fixes it. */
+    background: rgba(21, 15, 16, 0.99);
     border-top: 1px solid var(--line);
     visibility: hidden;
     opacity: 0;
@@ -1481,7 +1508,12 @@ button.cal__cell.is-selected {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #090708;
+  /* iOS 26 Safari clips fully-opaque position:fixed elements at the status
+     bar / toolbar edges. The visible fill actually comes from
+     .site-lock__backdrop (an absolute child, unaffected) painted on top of
+     this, so dropping this one's alpha slightly has no visual effect but
+     avoids the clipping. */
+  background: rgba(9, 7, 8, 0.99);
   color: #f5eeee;
   opacity: 1;
   visibility: visible;
