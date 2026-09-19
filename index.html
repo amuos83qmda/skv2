@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The SuperKools | Warsaw, Indiana</title>
+  <meta name="description" content="The SuperKools are a five piece band from northern Indiana playing pop, soul, and rock and roll. Based in Warsaw, Indiana.">
+  <meta name="theme-color" content="#150f10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The SuperKools | Warsaw, Indiana">
+  <meta property="og:description" content="A five piece band from northern Indiana playing pop, soul, and rock and roll.">
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <!-- Fonts: Abril Fatface (display) + Figtree (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b8141f'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23150f10'/%3E%3C/svg%3E">
+</head>
+
+<body>
+   <!-- SITE LOCK SCREEN -->
+<div class="site-lock" id="site-lock" aria-hidden="false">
+  <div class="site-lock__backdrop"></div>
+
+  <div class="site-lock__content">
+
+    <h1>Site Revamp</h1>
+    <p class="site-lock__description">
+      BETA! Enter the access code to continue.
+    </p>
+
+    <form class="site-lock__form" id="site-lock-form">
+      <div class="site-lock__field">
+        <input
+          id="site-lock-password"
+          type="password"
+          autocomplete="off"
+          placeholder="Access code"
+          aria-label="Access code"
+          required
+        >
+        <button type="submit" aria-label="Enter site">
+          <span>Enter</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h13"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p class="site-lock__error" id="site-lock-error" role="alert">
+        Incorrect access code.
+      </p>
+    </form>
+
+    <p class="site-lock__footer">THE SUPERKOOLS · WARSAW, IN</p>
+  </div>
+</div>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Placeholder for missing member pics -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="silhouette" viewBox="0 0 200 260">
+      <circle cx="100" cy="82" r="46"/>
+      <path d="M14 260c0-62 38-100 86-100s86 38 86 100z"/>
+    </symbol>
+  </svg>
+
+  <!-- ======================================================================
+       HEADER + NAV
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="The SuperKools, back to top">
+        <img src="assets/logo.png" alt="The SuperKools" width="120" height="120">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#band">Band</a></li>
+          <li><a href="#gigs">Gigs</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav__contact">
+          <a href="mailto:ianglin92@yahoo.com">ianglin92@yahoo.com</a>
+          <a href="tel:+15743736452">(574) 373-6452</a>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__background" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+        <img
+        class="hero__logo-img"
+        src="assets/logo.png"
+        alt="The SuperKools.com Logo"
+        width="600"
+        height="600"
+        >
+
+        <p class="hero__tagline">Pop · Soul · Rock &amp; Roll</p>
+
+        <div class="hero__cta">
+        <a class="btn btn--primary" href="#gigs">Upcoming gigs</a>
+        <a class="btn btn--ghost" href="#music">Listen to our music!</a>
+        </div>
+    </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT
+         ==================================================================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <div class="about__side">
+          <h2 class="section-title" id="about-title">About Us</h2>
+
+          <aside class="notes" aria-label="Band details">
+            <dl class="notes__list">
+              <div><dt>Lineup</dt><dd>Five piece band</dd></div>
+              <div><dt>Sound</dt><dd>Pop, soul, rock and roll</dd></div>
+              <div><dt>Home</dt><dd>Warsaw, Indiana</dd></div>
+              <div><dt>Playing</dt><dd>Shows and gigs across Indy</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="about__main">
+          <p class="about__lede">The SuperKools are a five piece band from northern Indiana entertaining crowds with a mixture of pop, soul, and rock and roll.</p>
+          <p class="about__body">Based in Warsaw, Indiana, we&rsquo;ve played countless shows and gigs across Indiana.</p>
+          <p class="pullquote">We&rsquo;re a songwriting powerhouse, constantly creating and gearing up for our next big release!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MEET THE BAND PICS
+         Photos: transparent pngs at assets/members/<name>.png
+         ==================================================================== -->
+    <section class="section band" id="band" aria-labelledby="band-title">
+      <div class="wrap">
+        <h2 class="section-title" id="band-title">Meet the Band</h2>
+
+        <ul class="lineup">
+          <li class="member" data-asset-wrap>
+            <div class="member__stage">
+              <span class="member__shape" aria-hidden="true"></span>
+              <img class="member__photo" src="assets/members/megan.png" alt="Megan, vocals and percussion" width="900" height="1200" loading="lazy" decoding="async" data-asset>
+              <div class="asset-missing member__missing" aria-hidden="true">
+                <svg class="silhouette" viewBox="0 0 200 260"><use href="#silhouette"/></svg>
+                <span class="asset-missing__path">assets/members/megan.png</span>
+              </div>
+            </div>
+            <div class="member__meta">
+              <h3 class="member__name">Megan</h3>
+              <p class="member__role">Vocals + Percussion</p>
+            </div>
+          </li>
+
+          <li class="member" data-asset-wrap>
+            <div class="member__stage">
+              <span class="member__shape" aria-hidden="true"></span>
+              <img class="member__photo" src="assets/members/joe.png" alt="Joe, guitar and vocals" width="900" height="1200" loading="lazy" decoding="async" data-asset>
+              <div class="asset-missing member__missing" aria-hidden="true">
+                <svg class="silhouette" viewBox="0 0 200 260"><use href="#silhouette"/></svg>
+                <span class="asset-missing__path">assets/members/joe.png</span>
+              </div>
+            </div>
+            <div class="member__meta">
+              <h3 class="member__name">Joe</h3>
+              <p class="member__role">Guitar + Vocals</p>
+            </div>
+          </li>
+
+          <li class="member" data-asset-wrap>
+            <div class="member__stage">
+              <span class="member__shape" aria-hidden="true"></span>
+              <img class="member__photo" src="assets/members/chris.png" alt="Chris, bass and vocals" width="900" height="1200" loading="lazy" decoding="async" data-asset>
+              <div class="asset-missing member__missing" aria-hidden="true">
+                <svg class="silhouette" viewBox="0 0 200 260"><use href="#silhouette"/></svg>
+                <span class="asset-missing__path">assets/members/chris.png</span>
+              </div>
+            </div>
+            <div class="member__meta">
+              <h3 class="member__name">Chris</h3>
+              <p class="member__role">Bass + Vocals</p>
+            </div>
+          </li>
+
+          <li class="member" data-asset-wrap>
+            <div class="member__stage">
+              <span class="member__shape" aria-hidden="true"></span>
+              <img class="member__photo" src="assets/members/kyalan.png" alt="Kyalan, drums" width="900" height="1200" loading="lazy" decoding="async" data-asset>
+              <div class="asset-missing member__missing" aria-hidden="true">
+                <svg class="silhouette" viewBox="0 0 200 260"><use href="#silhouette"/></svg>
+                <span class="asset-missing__path">assets/members/kyalan.png</span>
+              </div>
+            </div>
+            <div class="member__meta">
+              <h3 class="member__name">Kyalan</h3>
+              <p class="member__role">Drums</p>
+            </div>
+          </li>
+
+          <li class="member" data-asset-wrap>
+            <div class="member__stage">
+              <span class="member__shape" aria-hidden="true"></span>
+              <img class="member__photo" src="assets/members/ian.png" alt="Ian, keyboard and sound effects" width="900" height="1200" loading="lazy" decoding="async" data-asset>
+              <div class="asset-missing member__missing" aria-hidden="true">
+                <svg class="silhouette" viewBox="0 0 200 260"><use href="#silhouette"/></svg>
+                <span class="asset-missing__path">assets/members/ian.png</span>
+              </div>
+            </div>
+            <div class="member__meta">
+              <h3 class="member__name">Ian</h3>
+              <p class="member__role">Keyboard + SFX</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         UPCOMING GIGS
+         Edit via Gigs array in JS
+         ==================================================================== -->
+    <section class="section gigs" id="gigs" aria-labelledby="gigs-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-title" id="gigs-title">Upcoming Gigs</h2>
+          <p class="section-head__note">Select a highlighted date to see the show details. Past shows are listed at the bottom.</p>
+        </header>
+
+        <div class="gigs__layout" id="gigs-app">
+
+          <!-- Calendar -->
+          <div class="cal">
+            <div class="cal__bar">
+              <button class="cal__nav" type="button" data-cal-prev aria-label="Previous month">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </button>
+              <div class="cal__heading">
+                <h3 class="cal__title" id="cal-title" data-cal-title aria-live="polite" aria-atomic="true">Calendar</h3>
+                <button class="cal__today" type="button" data-cal-today>Back to today</button>
+              </div>
+              <button class="cal__nav" type="button" data-cal-next aria-label="Next month">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <div class="cal__viewport" data-cal-viewport>
+              <table class="cal__grid" aria-labelledby="cal-title">
+                <thead>
+                  <tr>
+                    <th scope="col"><abbr title="Sunday">Sun</abbr></th>
+                    <th scope="col"><abbr title="Monday">Mon</abbr></th>
+                    <th scope="col"><abbr title="Tuesday">Tue</abbr></th>
+                    <th scope="col"><abbr title="Wednesday">Wed</abbr></th>
+                    <th scope="col"><abbr title="Thursday">Thu</abbr></th>
+                    <th scope="col"><abbr title="Friday">Fri</abbr></th>
+                    <th scope="col"><abbr title="Saturday">Sat</abbr></th>
+                  </tr>
+                </thead>
+                <tbody data-cal-body></tbody>
+              </table>
+            </div>
+
+            <div class="cal__empty" data-cal-empty hidden></div>
+
+            <ul class="cal__key" aria-label="Calendar key">
+              <li><span class="cal__key-swatch cal__key-swatch--gig" aria-hidden="true"></span>Upcoming show</li>
+              <li><span class="cal__key-swatch cal__key-swatch--past" aria-hidden="true"></span>Past show</li>
+              <li><span class="cal__key-swatch cal__key-swatch--today" aria-hidden="true"></span>Today</li>
+            </ul>
+          </div>
+
+          <!-- Selected show details -->
+          <div class="gig-detail" data-gig-detail></div>
+
+          <!-- Upcoming list -->
+          <div class="gig-list">
+            <h3 class="gig-list__title">Next shows</h3>
+            <ol class="gig-list__items" data-upcoming></ol>
+            <button class="text-link gig-list__more" type="button" data-upcoming-more hidden>Show all upcoming shows</button>
+
+            <details class="gig-past" data-past-wrap hidden>
+              <summary>Past shows</summary>
+              <ol class="gig-list__items gig-list__items--past" data-past></ol>
+            </details>
+          </div>
+        </div>
+
+        <noscript>
+          <p class="noscript-note">The show calendar needs JavaScript. To find out where we are playing next, email <a href="mailto:ianglin92@yahoo.com">ianglin92@yahoo.com</a> or call <a href="tel:+15743736452">(574) 373-6452</a>.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         OUR MUSIC
+         ==================================================================== -->
+    <section class="section music" id="music" aria-labelledby="music-title">
+      <svg class="music__deco" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+        <circle cx="200" cy="200" r="196"/><circle cx="200" cy="200" r="176"/>
+        <circle cx="200" cy="200" r="156"/><circle cx="200" cy="200" r="136"/>
+        <circle cx="200" cy="200" r="116"/><circle cx="200" cy="200" r="96"/>
+        <circle class="music__deco-label" cx="200" cy="200" r="64"/>
+        <circle class="music__deco-hole" cx="200" cy="200" r="8"/>
+      </svg>
+
+      <div class="wrap music__wrap">
+        <header class="section-head">
+          <h2 class="section-title" id="music-title">Our Music</h2>
+          <p class="section-head__note">Our most popular songs from our new record, The Super Kools.</p>
+        </header>
+
+        <!--
+          SPOTIFY EMBEDS
+        -->
+        <div class="music__grid">
+
+          <!-- DOING IT RIGHT -->
+          <div class="embed embed--featured">
+            <h3 class="embed__title">Doing it Right</h3>
+            <div class="embed__frame">
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7rM1cBJ1QRyNrNu6spfkgz?utm_source=generator&si=9651308411024555" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- STAIRWAY FROM HELL -->
+          <div class="embed embed--track">
+            <h3 class="embed__title">Stairway from Hell</h3>
+            <div class="embed__frame">
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/55x6OWb0z2DzivhfbUGlJs?utm_source=generator&si=ca85569556514854" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- CAKE AND SMILES -->
+          <div class="embed embed--track">
+            <h3 class="embed__title">Cake and Smiles</h3>
+            <div class="embed__frame">
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1hFHOpzJMUb3zytDA3THp0?utm_source=generator&si=228dfd86b4724716" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PIC GALLERY
+         ==================================================================== -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-title" id="gallery-title">Media Gallery</h2>
+          <p class="section-head__note">Photos of the band. Select any photo to view it larger or download it.</p>
+        </header>
+
+        <ul class="masonry" data-gallery></ul>
+
+        <noscript>
+          <p class="noscript-note">The photo gallery needs JavaScript to display.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         GET IN TOUCH
+         ==================================================================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="contact__info">
+          <h2 class="section-title" id="contact-title">Get in Touch</h2>
+          <p class="contact__intro">Not currently working, will implement later.</p>
+
+          <dl class="contact__list">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:ianglin92@yahoo.com">ianglin92@yahoo.com</a></dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+15743736452">(574) 373-6452</a></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Warsaw, Indiana</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!--
+          ======================================================================
+          FORMSPREE SETUP
+          1. Create a form at https://formspree.io and copy its endpoint URL.
+          2. Replace the whole action value below (the one ending in YOUR_FORM_ID)
+             with your endpoint, for example: https://formspree.io/f/abcdwxyz
+          That is the only change needed. Until then, the form tells visitors it
+          is not connected yet and points them to the email and phone above.
+          ======================================================================
+        -->
+        <form class="form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="6" required></textarea>
+          </div>
+
+          <!-- Spam trap for Formspree. Leave as is. -->
+          <p class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+          <input type="hidden" name="_subject" value="New message from The SuperKools website">
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p class="site-footer__brand"></p>
+      <p class="site-footer__meta">Pop, soul, and rock and roll from Warsaw, Indiana.</p>
+      <p class="site-footer__copy">&copy; <span data-year>2026</span> The SuperKools</p>
+      <a class="site-footer__top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       LIGHTBOX (photo viewer). Populated by js/script.js.
+       ====================================================================== -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <div class="lightbox__stage" data-lb-stage>
+      <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close photo viewer">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Next photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <figure class="lightbox__figure">
+        <div class="lightbox__media" data-lb-media>
+          <img class="lightbox__img" data-lb-img src="" alt="">
+          <div class="lightbox__missing" aria-hidden="true">
+            <span>Photo not found</span>
+            <span class="asset-missing__path" data-lb-path></span>
+          </div>
+        </div>
+        <figcaption class="lightbox__caption">
+          <div>
+            <p class="lightbox__title" data-lb-title></p>
+            <p class="lightbox__meta" data-lb-meta></p>
+          </div>
+          <div class="lightbox__actions">
+            <span class="lightbox__count" data-lb-count aria-live="polite"></span>
+            <a class="btn btn--ghost btn--small" data-lb-download href="#" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              Download
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </dialog>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
